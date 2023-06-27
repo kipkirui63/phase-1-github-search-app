@@ -7,14 +7,22 @@ form.addEventListener('submit', function(event){
 
     var originalName = search.split(' ').join('')
 
-    alert(originalName)
+    // clear previous serach result
+    document.getElementById("user-list").innerHTML = ""
     
 
 
-  
+    fetch("https://api.github.com/users/"+originalName)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
 
 
-
+        document.getElementById("user-list").innerHTML =  `
+        <a target="_blank" href="https://www.github.com/${originalName}"><img src="${data.avatar_url}"></a>
+    `;
+    
+        
     })
 
 
