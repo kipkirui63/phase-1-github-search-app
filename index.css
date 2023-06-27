@@ -1,3 +1,9 @@
+body{
+  background-color: rgb(1, 1, 22);
+}
+h2{
+  color: aquamarine;
+}
 #main {
   display: flex;
   flex-direction: column;
