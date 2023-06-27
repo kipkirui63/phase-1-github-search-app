@@ -11,13 +11,10 @@ form.addEventListener('submit', function(event){
     
 
 
-    fetch("https://api.github.com/users/"+originalName)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
+  
 
 
-        
+
     })
 
 
